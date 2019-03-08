@@ -1,29 +1,8 @@
-# vuetest
+# 使用说明
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+```sh
+  $ npm i
+  $ npm run dev
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+然后浏览器访问 http://localhost:8080，按照页面提示进行配置修改，或者添加插件

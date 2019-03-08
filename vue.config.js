@@ -1,13 +1,16 @@
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 
-console.log(process.env.NODE_ENV)
-console.log(process.env.VUE_APP_MODE)
+const buildMode = process.env.VUE_APP_MODE;
+const assetsDir = process.env.VUE_APP_ASSETS || '/';
+const publicPath = process.env.VUE_APP_PUBLICPATH || '/';
+const distDit = process.env.VUE_APP_DISTDIR || 'dist';
 
 module.exports = {
   productionSourceMap: false,
-  baseUrl: '/',
-  outputDir: 'dist',
+  publicPath: publicPath,
+  assetsDir: assetsDir,
+  outputDir: distDit,
   devServer: {
     open: process.platform === 'darwin',
     host: 'localhost',
@@ -30,12 +33,7 @@ module.exports = {
         '@': path.resolve(__dirname,'src')
       }
     }
-    if (process.env.NODE_ENV === 'production') {
-      // mutate config for production...
-    } else {
-      // mutate config for development...
-    }
-    if (process.env.VUE_APP_MODE === 'analysis') {
+    if (buildMode === 'analysis') {
       config.plugins.push(new BundleAnalyzerPlugin());
     } 
   }
