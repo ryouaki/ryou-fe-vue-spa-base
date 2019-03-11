@@ -1,21 +1,25 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <main id="app">
+    <login v-if="!isLogin"/>
+    <router-view v-else/>
+  </main>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Login from '@/views/Login';
+import { mapState, mapGetters } from 'vuex';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Login
+  },
+  computed: {
+    ...mapGetters([
+      'isLogin'
+    ])
   }
 }
 </script>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

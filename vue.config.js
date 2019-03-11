@@ -25,16 +25,17 @@ module.exports = {
   },
   configureWebpack: config => {
     config.externals = {
-    }
+    };
     config.resolve = {
       extensions:['.js', '.vue', '.json'],
       alias: {
         'vue':'vue/dist/vue.common.js',
         '@': path.resolve(__dirname,'src')
       }
-    }
+    };
     if (buildMode === 'analysis') {
       config.plugins.push(new BundleAnalyzerPlugin());
     } 
   }
-}
+};
+
