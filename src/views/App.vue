@@ -1,12 +1,13 @@
 <template>
   <main id="app">
+    {{JSON.stringify(state)}}
     <login v-if="!isLogin"/>
     <router-view v-else/>
   </main>
 </template>
 <script>
 import Login from '@/views/Login';
-import { mapState, mapGetters } from 'vuex';
+import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   name: 'app',
@@ -14,19 +15,24 @@ export default {
     Login
   },
   computed: {
+    ...mapState({
+      state: state => state
+    }),
     ...mapGetters([
       'isLogin'
     ])
+  },
+  created() {
+    this.doInit();
+  },
+  methods: {
+    ...mapActions('User', ['doInit'])
   }
 }
 </script>
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
+  width: 100%;
 }
 </style>

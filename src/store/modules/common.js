@@ -5,11 +5,8 @@ export default function (actions) {
       data: null
     },
     mutations: {
-      UPDATE(state, user) {
-        state.data = user;
-      },
-      CLEAN(state) {
-        state.data = null;
+      ERROR(state, exception) {
+        state.data = exception;
       }
     },
     actions: actions
