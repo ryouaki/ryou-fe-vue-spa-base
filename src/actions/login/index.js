@@ -1,4 +1,4 @@
-import { doInit, doLogin, doLogout } from '@/api/login';
+import { doInit, doLogin, doLogout } from '@/fetch/login';
 
 export default {
   async doInit(context) {

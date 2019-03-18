@@ -6,7 +6,7 @@
 <script>
 export default {
   name: 'Introduction'
-}
+};
 </script>
 <style>
 .introduction__section {

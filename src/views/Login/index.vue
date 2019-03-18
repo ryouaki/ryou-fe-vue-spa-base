@@ -16,15 +16,14 @@ export default {
         username: 'ryouaki',
         password: '123456'
       }
-    }
+    };
   },
   methods: {
     onSubmit() {
-      console.log(this.form)
       return false;
     }
   }
-}
+};
 </script>
 <style>
 .login__section {

@@ -6,7 +6,7 @@
 <script>
 export default {
   name: 'layout-fullscreen'
-}
+};
 </script>
 <style>
 .layout__fullscreen {

@@ -28,7 +28,7 @@ export default {
   methods: {
     ...mapActions('User', ['doInit'])
   }
-}
+};
 </script>
 <style>
 #app {
