@@ -16,5 +16,6 @@ export default {
   position: fixed;
   right: 10px;
   top: 10px;
+  color: red;
 }
 </style>
