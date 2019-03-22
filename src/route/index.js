@@ -6,6 +6,10 @@ import Introduction from './Introduction';
 Vue.use(VueRouter);
 
 const routes = [
+  {
+    path: '/',
+    redirect: '/introduction/index'
+  },
   Introduction
 ];
 

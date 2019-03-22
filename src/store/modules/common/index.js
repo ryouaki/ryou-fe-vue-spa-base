@@ -3,11 +3,12 @@ import proxy from '@/store/proxy';
 export default {
   namespaced: true,
   state: {
-    data: null
+    error: null,
+    userInfo: null
   },
   mutations: {
     ERROR(state, exception) {
-      state.data = exception;
+      state.error = exception;
     }
   },
   actions: proxy({
