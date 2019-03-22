@@ -55,7 +55,7 @@ export function doLogout() {
       reject({
         code: 0,
         data: null,
-        msg: 'Logout success'
+        msg: 'Logout failed'
       });
     }, 500);
   });

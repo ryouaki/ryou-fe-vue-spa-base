@@ -3,6 +3,6 @@ export default {
     return state.Login.userInfo !== null;
   },
   sysError(state) {
-    return state.Common.error;
+    return state.Common.error || {};
   }
 };

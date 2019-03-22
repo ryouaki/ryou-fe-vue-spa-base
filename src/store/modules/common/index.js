@@ -14,6 +14,9 @@ export default {
   actions: proxy({
     async error(context, exception) {
       context.commit('ERROR', exception);
+      setTimeout(() => {
+        context.commit('ERROR', null);
+      }, 2000);
     }
   })
 };

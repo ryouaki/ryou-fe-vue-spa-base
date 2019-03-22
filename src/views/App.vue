@@ -1,23 +1,22 @@
 <template>
   <main id="app">
-    {{JSON.stringify(state)}}
     <login v-if="!isLogin"/>
     <router-view v-else/>
+    <comp-alert :msg="sysError.msg" v-if="sysError.msg"/>
   </main>
 </template>
 <script>
 import Login from '@/views/Login';
+import CompAlert from '@/components/CompAlert';
 import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   name: 'app',
   components: {
-    Login
+    Login,
+    CompAlert
   },
   computed: {
-    ...mapState({
-      state: state => state
-    }),
     ...mapGetters([
       'isLogin',
       'sysError'
