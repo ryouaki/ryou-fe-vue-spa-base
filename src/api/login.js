@@ -1,5 +1,5 @@
 export function doInit() {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       const userInfo = sessionStorage.getItem('userInfo');
       if (userInfo) {
@@ -9,7 +9,7 @@ export function doInit() {
           msg: ''
         });
       } else {
-        reject({
+        resolve({
           code: 0,
           data: null,
           msg: ''
@@ -50,9 +50,9 @@ export function doLogin(params) {
 }
 
 export function doLogout() {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve({
+      reject({
         code: 0,
         data: null,
         msg: 'Logout success'

@@ -19,7 +19,8 @@ export default {
       state: state => state
     }),
     ...mapGetters([
-      'isLogin'
+      'isLogin',
+      'sysError'
     ])
   },
   created() {

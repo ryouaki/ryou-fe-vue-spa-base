@@ -1,11 +1,16 @@
 <template>
   <section class="introduction__section">
-    hellpo
+    <button @click="doLogout">请求异常接口</button>
   </section>
 </template>
 <script>
+import { mapActions } from 'vuex';
+
 export default {
-  name: 'Introduction'
+  name: 'Introduction',
+  methods: {
+    ...mapActions('Login', ['doLogout'])
+  }
 };
 </script>
 <style>
