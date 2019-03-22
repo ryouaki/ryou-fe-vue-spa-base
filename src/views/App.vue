@@ -26,7 +26,7 @@ export default {
     this.doInit();
   },
   methods: {
-    ...mapActions('User', ['doInit'])
+    ...mapActions('Login', ['doInit'])
   }
 };
 </script>
