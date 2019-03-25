@@ -1,9 +1,9 @@
 {
-  "name": "ryou-fe-vue-spa-base",
+  "name": "{{name}}",
   "description": "{{description}}",
-  "author": {
-    "name": "aaa"
-  },
+  "author": [
+    "{{author}}"
+  ],
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve --mode dev",
