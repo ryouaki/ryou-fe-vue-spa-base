@@ -16,8 +16,6 @@
   </section>
 </template>
 <script>
-import { mapState, mapActions } from 'vuex';
-
 export default {
   name: 'LoginView',
   data() {
@@ -29,16 +27,13 @@ export default {
     };
   },
   computed: {
-    ...mapState({
-      error: (state) => {
-        return state.Login.error;
-      }
-    })
+    error() {
+      return this.$store.state.Login.error
+    }
   },
   methods: {
-    ...mapActions('Login', ['doLogin']),
     onSubmit() {
-      this.doLogin(this.form);
+      return this.$store.dispatch('Login/doLogin', this.form)
       return false;
     }
   }
