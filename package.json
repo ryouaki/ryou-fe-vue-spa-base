@@ -1,8 +1,8 @@
 {
-  "name": "ryou-fe-vue-spa-base",
+  "name": "{{name}}",
   "description": "{{description}}",
   "author": {
-    "name": "aaa"
+    "name": "{{author}}"
   },
   "private": true,
   "scripts": {
