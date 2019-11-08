@@ -9,13 +9,40 @@ eslint配置采用vue-cli默认配置。
     |-- index.html // 模板文件
 |-- src
     |-- api    // 用于放置ajax接口请求的文件
+    |-- common // utils工具类
+        |-- utils.js
+        |-- string.js
+        |-- date.js
     |-- assets // 用于放置需要打包的静态文件。但是推荐放在public目录下的static文件夹下，可以避免由于打包内容过多造成打包时间太长。
     |-- components // UI基础组件
+        |-- XXXCmp // UI组件目录
+            |-- index.vue
+        |-- XXXCmp.vue // UI组件文件
+        |-- xxxx.js // Dom组件
+    |-- fragments // 通用业务组件
+        |-- XXXFrag
+            |-- index.vue
+        |-- index.js
     |-- layouts // UI布局文件
+        |-- layout1.vue // 布局
     |-- route // 路由配置文件
+        |-- module1 // 模块路由配置
+        index.js
     |-- store // store信息，以及actions中包含各种业务逻辑
+        |-- modules
+            |-- module1
+            |-- index.js
+        |-- index.js
     |-- styles // 全局样式
+        |-- var.less
     |-- views // 模块页面文件
+        |-- modules1
+            |-- widgets
+                |-- XXXWidg
+                    |-- index.vue
+                |-- XXXWidg.vue
+            |-- index.vue
+        |-- app.vue
     |-- main.js // 程序入口
 |-- env       // 开发环境变量配置文件，需要以VUE_APP开头
 |-- env.alpha // 测试环境配置文件
