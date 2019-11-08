@@ -57,6 +57,12 @@ eslint配置采用vue-cli默认配置。
                     |-- index.vue
                 |-- XXXWidg.vue
             |-- index.vue
+        |-- modules2
+            |-- widgets
+                |-- XXXWidg
+                    |-- index.vue
+                |-- XXXWidg.vue
+            |-- index.vue
         |-- app.vue
     |-- main.js // 程序入口
 |-- env       // 开发环境变量配置文件，需要以VUE_APP开头
