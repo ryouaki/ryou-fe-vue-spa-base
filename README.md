@@ -31,8 +31,23 @@ eslint配置采用vue-cli默认配置。
     |-- store // store信息，以及actions中包含各种业务逻辑
         |-- modules
             |-- module1
+                |-- actions.js
+                |-- getters.js
+                |-- mutations.js
+                |-- state.js
+                |-- index.js
+            |-- module2
+                |-- actions.js
+                |-- getters.js
+                |-- mutations.js
+                |-- state.js
+                |-- index.js
             |-- index.js
         |-- index.js
+        |-- actions.js
+        |-- getters.js
+        |-- state.js
+        |-- mutations.js
     |-- styles // 全局样式
         |-- var.less
     |-- views // 模块页面文件
