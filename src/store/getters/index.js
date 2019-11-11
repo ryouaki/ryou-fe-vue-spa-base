@@ -1,8 +1,5 @@
 export default {
-  isLogin(state) {
-    return state.Login.userInfo !== null;
-  },
-  sysError(state) {
-    return state.Common.error || {};
+  message(state) {
+    return state.App.msg || '';
   }
 };

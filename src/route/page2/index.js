@@ -1,12 +1,12 @@
 import Fullscreen from '@/layouts/Fullscreen';
 
 export default {
-  path: '/introduction',
+  path: '/page2',
   component: Fullscreen,
   children: [
     {
-      path: 'index',
-      component: () => import('@/views/Introduction'),
+      path: '',
+      component: () => import('@/views/Page2'),
     }
   ]
 };

@@ -1,16 +1,18 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import Introduction from './Introduction';
+import Page1 from './page1';
+import Page2 from './page2';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    redirect: '/introduction/index'
+    component: () => import('@/views/Main')
   },
-  Introduction
+  Page1,
+  Page2
 ];
 
 export default new VueRouter({

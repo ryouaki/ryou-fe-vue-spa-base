@@ -1,7 +1,5 @@
-import Common from './common';
-import Login from './login';
+import App from './app';
 
 export default {
-  Common,
-  Login
+  App
 };
